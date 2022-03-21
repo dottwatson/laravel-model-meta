@@ -71,29 +71,7 @@ trait ModelMeta
             }
         });
     
-        // static::retrieved(function($model) use($metaAttributes) {
-        //     dd($model);
-        //     $metaReferenceValue = $model->getMetaReferenceValue();
-        //     $tableMeta          = $model->getTableMeta();
-        //     $metas              = DB::table($tableMeta)
-        //         ->select('*')
-        //         ->where('model_reference',$metaReferenceValue)
-        //         ->get();
-
-        //     $metas = $metas->mapWithKeys(function($item,$key){
-        //         return [$item->name => $item];
-        //     })->all();
-
-        //     foreach($metaAttributes as $metaKey=>$metaInfo){
-        //         if(isset($metas[$metaKey])){
-        //             $model->setMeta($metaKey,$metas[$metaKey]->value);
-        //         }
-        //         else{
-        //             $model->setMeta($metaKey,null);
-        //         }
-        //     }       
-        // });
-        
+       
         static::saved(function($model){
             $metaReferenceValue = $model->getMetaReferenceValue();
             $metaAttributes     = $model::metaAttributes();

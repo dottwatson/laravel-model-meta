@@ -1,0 +1,19 @@
+{
+    "name": "dottwatson/laravel-model-meta",
+    "type": "library",
+    "description": "A fast, configurable and smart tool to manage metat data on your models",
+    "keywords": ["laravel","metadata","meta","model"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dottwatson\\ModelMeta\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dottwatson\\ModelMeta\\ModelMetaServiceProvider"
+            ]
+        }
+    }
+}

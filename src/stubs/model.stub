@@ -1,0 +1,35 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Dottwatson\ModelMeta\ModelMeta;
+
+
+class {{ class }} extends Model
+{
+    use HasFactory,ModelMeta;
+
+
+    //the table of entities
+    protected $tableMeta = '{{ table_meta }}';
+
+
+    // // define your meta map here or add it in entity-meta config file
+    // public static function metaAttributes()
+    // {
+    //     return [];
+    // }
+
+
+    // // define your referenced model attribute here or leave it commented
+    // public static function metaReference()
+    // {
+    //     return (new static)->primaryKey();
+    // }
+
+
+
+    // your code here
+}
